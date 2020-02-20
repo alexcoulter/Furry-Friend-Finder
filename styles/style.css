@@ -95,7 +95,7 @@ h1, h4, h2, .summary, .brand-logo {
 
   .card img {
 	width: 50%;
-	height: 300px;
+	height: auto;
 	float:left;
 	position: relative;
    	top:0;
