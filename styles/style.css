@@ -3,9 +3,14 @@
 	padding-left:10px;
    }
 
+   #cat-image img {
+     margin-bottom: -10%;
+   }
+
+
 .page-footer {
-    padding-top:20px;
-	margin-top:240px;
+  padding-top:20px;
+	margin-top:40px;
 	background-color:#0388A6;
 }
 
@@ -60,22 +65,17 @@ h1, h4, h2, .summary, .brand-logo {
     height: 500px;
   }
 
-  #dog-image {
-	padding: 50px;
-	float:left;
-	position: relative;
-  left:0;
-  width: 30%;
+  .left-section, .right-section {
+    padding-top: 5%;
+    text-align: center;
+    margin:0 auto;
+  display:inline-block;
+  width: 48%;
   }
 
-  #cat-image {
-	padding: 50px;
-	float:right;
-	position: relative;
-	right:0;
+  input {
+    color: white;
   }
-
-  
   
   #mapInfo {
     float: left;
@@ -217,8 +217,8 @@ h1{
   }
 
   @media only screen and (max-width: 1000px) {
-#dog-image, #cat-image {
-  display: none;
+#cat-image img, #dog-image img {
+  width: 85%;
 }
 
   }

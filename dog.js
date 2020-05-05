@@ -1,7 +1,7 @@
 //declaring global variables
 var L;
 window.onload = function () {
-  var sex, zip, street, city, state, mediaContent, directions, current, destination, breedType, lat, lon, mqQuery;
+  var sex, zip, city, state, directions, current, destination, breedType, lat, lon, mqQuery;
   dirArray = [];
   var geoCount = 0;
   var wantMap = false;
@@ -25,17 +25,19 @@ window.onload = function () {
     if (breedType == "Select Breed") {
       breedType = "";
     }
-    //breedType = formatBreed(breedType);
+    
     sex = $("#sex").val().toUpperCase();
     if (sex !== "M" && sex !== "F" && sex !== "") {
       $("#sex").val("Can only input M or F or leave blank");
       $("#sex").attr("style", "color: red");
+      return;
     }
     zip = $("#zip").val();
-    if (zip > 9999 && zip < 100000) { }
+    if ((zip > 9999 && zip < 100000) || (zip[0] === "0" &&  zip.length === 5)) { }
     else {
       $("#zip").val("Must be a 5 digit number");
       $("#zip").attr("style", "color: red");
+      return;
     }
     dogSearch($("#breed").children("option:selected").text());
     apiCall();
