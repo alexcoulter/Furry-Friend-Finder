@@ -52,6 +52,7 @@ window.onload = function () {
     var i = $(this).parent("div").attr("id");
     mqQuery = localStorage.getItem(i);
     $("#startBtn" + i).text("Display Map");
+    $("#mapID").removeClass("hide");
     if (noGeo) {
       noGeoloc(i);
     }
@@ -327,7 +328,7 @@ window.onload = function () {
   function buildMap(mqQuery) {
     L.mapquest.key = 'oKGNJy7554W39K4kH01ZGPwNamd85M0c';
     destination = mqQuery;
-    $("#mapID").removeClass("hide");
+    // $("#mapID").removeClass("hide");
 
     // 'map' refers to a <div> element with the ID map
     L.mapquest.map('mapID', {
